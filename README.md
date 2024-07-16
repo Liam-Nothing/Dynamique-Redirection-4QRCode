@@ -14,17 +14,12 @@ Dynamique-Redirection-4QRCode is a PHP-based project designed to facilitate dyna
 
 ## Installation
 
-1. **Clone the Repository**:
-    ```
-    git clone https://github.com/yourusername/owner-avatar-dynamique-redirection-4qrcode.git
-    ```
-
-2. **Navigate to the Project Directory**:
+1. **Navigate to the Project Directory**:
     ```
     cd owner-avatar-dynamique-redirection-4qrcode
     ```
 
-3. **Set Up Configuration**:
+2. **Set Up Configuration**:
     - Open `config/config.php` and set your admin password.
 
     ```php
@@ -32,16 +27,13 @@ Dynamique-Redirection-4QRCode is a PHP-based project designed to facilitate dyna
     $adminPassword = 'your_password';
     ```
 
-4. **Ensure File Permissions**:
+3. **Ensure File Permissions**:
     - Make sure `url_storage.txt` and `button_urls.json` are writable by the web server.
 
     ```
     chmod 666 url_storage.txt
     chmod 666 button_urls.json
     ```
-
-5. **Deploy to a Web Server**:
-    - Copy the project files to your web server's document root or set up a virtual host pointing to the project directory.
 
 ## Usage
 
