@@ -5,7 +5,6 @@ require 'config/config.php';
 $urlFile = 'url_storage.txt';
 $buttonUrlsFile = 'button_urls.json';
 
-// Charger les URLs, titres et couleurs des boutons
 $buttonUrls = json_decode(file_get_contents($buttonUrlsFile), true);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -29,15 +28,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
     ?>
-    <form method="POST">
-        <input type="password" name="password" placeholder="Mot de passe">
-        <button type="submit">Se connecter</button>
-    </form>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <title>Administration Login</title>
+    </head>
+    <body class="bg-dark text-white">
+        <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;margin-top:0px !important;">
+            <div class="card bg-secondary text-white" style="width: 300px;">
+                <div class="card-body">
+                    <h3 class="card-title text-center">Login</h3>
+                    <form method="POST">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    </html>
     <?php
     exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
