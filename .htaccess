@@ -1,0 +1,11 @@
+<FilesMatch "config.php">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "url_storage.txt">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+Options -Indexes
