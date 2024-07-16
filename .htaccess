@@ -1,9 +1,4 @@
-<FilesMatch "config.php">
-    Order Deny,Allow
-    Deny from all
-</FilesMatch>
-
-<FilesMatch "url_storage.txt">
+<FilesMatch "(config.php|url_storage.txt|button_urls.json)">
     Order Deny,Allow
     Deny from all
 </FilesMatch>
